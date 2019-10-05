@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<style>
+    h1 {
+        color: #ff4d00;
+        font-size: 45px;
+        font-weight: 700;
+    }
+
+    .trash {
+        border: none;
+        background: none;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 700px;
+        margin: auto;
+        background: #FFB5E8;
+        color: white;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    input {
+        padding: 10px 10px;
+        margin-top: 10%;
+        width: 40%;
+    }
+
+    table {
+        table-layout: fixed;
+        width: 400px;
+    }
+
+    button {
+        padding: 10px 10px;
+
+    }
+</style>
+
+<body>
+
+    <h1>My first todo-app in js! 📝</h1>
+
+    <div id="app">
+        <table v-if="todoList.length > 0">
+            <tr v-for="(todo, index) in todoList">
+                <td>{{todo}}</td>
+                <td><button v-on:click="remove(index)" class="trash">🗑️</button></td>
+            </tr>
+        </table>
+        <div v-else>
+        <h4>Nothing to do here!</h4>
+        <h1>🦄👍🥂🎇🎈</h1>
+     </div>
+        <input v-model="message" v-on:keyup.enter="add" placeholder="what needs todo">
+        <button type: button v-on:click="add">Add todo</button>
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
