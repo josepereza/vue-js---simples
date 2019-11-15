@@ -7,7 +7,7 @@ var app = new Vue({
       coches: {
         marca:'',
         color:'',
-        cantidad:0
+        cantidad:null
       },
         
       
@@ -25,8 +25,8 @@ var app = new Vue({
      computed:{
        totalcoches: function(){
          this.total=0;
-          for(totalcantidad of this.datos){
-            this.total=this.total+totalcantidad.cantidad
+          for(autos of this.datos){
+            this.total=this.total+autos.cantidad
           }
           return this.total
         }
