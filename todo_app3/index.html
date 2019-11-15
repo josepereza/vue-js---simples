@@ -8,7 +8,7 @@
         <div id="app">
           <input placeholder="marca" v-model='coches.marca'>
             <input placeholder="color" v-model='coches.color'>
-             <input placeholder="edad" v-model.number='coches.edad'>
+             <input placeholder="cantidad" v-model.number='coches.cantidad'>
           <button v-on:click="agregar">agrege</button>
             <p>{{ message }}</p>
              
@@ -17,8 +17,8 @@
             
  <ul>
      <li  v-for="item in datos" :key="item.id">
-     {{item.marca}} {{item.color}} {{item.edad}}
-      <button v-on:click="item.edad++">+</button>
+     {{item.marca}} {{item.color}} {{item.cantidad}}
+      <button v-on:click="item.cantidad++">+</button>
      <li>
  </ul>
 

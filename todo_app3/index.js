@@ -3,7 +3,7 @@ var app = new Vue({
     data: {
       message: 'Hello Vue.js!',
       total:null,
-      datos:[{'marca':'seat','color':'rojo','edad':2},{'marca':'renault8','color':'amarillo','edad':4},{'marca':'mercedes-300','color':'negro','edad':6}],
+      datos:[{'marca':'seat','color':'rojo','cantidad':2},{'marca':'renault8','color':'amarillo','cantidad':4},{'marca':'mercedes-300','color':'negro','cantidad':6}],
       coches: {
         marca:'',
         color:'',
@@ -25,8 +25,8 @@ var app = new Vue({
      computed:{
        totalcoches: function(){
          this.total=0;
-          for(cantidad of this.datos){
-            this.total=this.total+cantidad.edad
+          for(totalcantidad of this.datos){
+            this.total=this.total+totalcantidad.cantidad
           }
           return this.total
         }
@@ -37,7 +37,7 @@ var app = new Vue({
       },
       
       agregar:function() {
-        this.datos.push({marca: this.coches.marca,color:this.coches.color,edad:this.coches.edad})
+        this.datos.push({marca: this.coches.marca,color:this.coches.color,cantidad:this.coches.cantidad})
       },
     
      
