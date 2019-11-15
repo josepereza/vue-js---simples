@@ -7,7 +7,7 @@ var app = new Vue({
       coches: {
         marca:'',
         color:'',
-        edad:0
+        cantidad:0
       },
         
       
