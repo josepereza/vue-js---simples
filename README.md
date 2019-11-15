@@ -10,5 +10,4 @@ todo-app2
 
 todo_app3
 
-![Alt text](todo-app3.png)
 ![Alt text](todo_app3.png)
