@@ -1,0 +1,9 @@
+body{
+    margin: 40px;
+}
+th{
+    font-size: 1.2em;
+    color:white;
+    background-color: black;
+    padding: 5px;
+}
